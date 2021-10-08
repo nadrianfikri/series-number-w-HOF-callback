@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Week4 Task1 HOF & callback</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <main>
+      <div id="data-input" class="container">
+        <div class="card">
+          <h2 class="text-title">Number Generator</h2>
+          <input type="number" id="number-input" name="number" class="input" placeholder="0" required />
+          <p class="text-desc">Input a number and then click one of the buttons below, to see the <span>series of numbers</span> you choose</p>
+          <button id="even-btn" type="button" class="btn red"><span>Even</span></button>
+          <button id="odd-btn" type="button" class="btn yellow"><span>Odd</span></button>
+          <button id="prime-btn" type="button" class="btn green"><span>Prime</span></button>
+        </div>
+      </div>
+      <div id="data-output" class="container">
+        <header>
+          <h1 id="text-title">Result</h1>
+        </header>
+        <div id="display-num">
+          <p></p>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

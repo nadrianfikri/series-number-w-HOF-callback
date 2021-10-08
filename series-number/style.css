@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif sans-serif;
+}
+
+/* data-output */
+main {
+  position: relative;
+
+  background-color: #eee;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  gap: 10px;
+  /* z-index: -2; */
+  /* overflow: hidden; */
+}
+/* main::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 100px;
+  right: 0;
+
+  width: 1000px;
+  height: 70px;
+  background-color: red;
+  transform: translate(50px, 180px) rotate(-45deg);
+
+  border-radius: 50%
+} */
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+#data-output {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  flex-basis: 60%;
+
+  align-items: center;
+  transition: 0.5s;
+}
+#data-output {
+  padding: 0px 40px;
+}
+
+#data-output h1 {
+  position: relative;
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-family: viga, helvetica;
+  border-radius: 5px;
+  z-index: 10;
+}
+#display-num {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  background-color: #fff;
+  border: 5px solid aliceblue;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px #000;
+  padding: 30px 10px 10px 10px;
+
+  min-height: 500px;
+  width: 100%;
+  max-height: auto;
+  transform: translateY(-50px);
+  overflow: auto;
+}
+#display-num p {
+  position: relative;
+  font-family: monospace;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 0 10px;
+
+  z-index: 20;
+}
+
+#data-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 40%;
+  background-color: aliceblue;
+}
+span {
+  font-weight: bold;
+}
+
+.card {
+  text-align: center;
+  width: 65%;
+  height: 500px;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: black;
+  /* text-shadow: 1px 1px 1px #000; */
+
+  padding: 4em 4em;
+  border-radius: 5px;
+  box-shadow: inset 2px 5px 10px 2px white, 2px 2px 10px black;
+  backdrop-filter: blur(10px);
+}
+
+.input {
+  text-align: center;
+  background-color: #eee;
+  font-family: monospace;
+  font-size: 1rem;
+
+  padding: 10px;
+  margin: 10px;
+
+  width: 70px;
+  height: 70px;
+  resize: none;
+  border-radius: 50%;
+
+  border: 1px solid grey;
+}
+.input:focus {
+  outline: none;
+}
+.text-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.text-desc {
+  font-size: 1rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #000000da;
+  font-weight: 200;
+}
+
+.btn {
+  position: relative;
+
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+
+  margin: 10px auto;
+  padding: 10px 40px;
+  width: 100%;
+
+  background: white;
+  border: 1px solid royalblue;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.btn::after {
+  content: '';
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  border-radius: 20px;
+
+  transition: 0.5s;
+}
+
+.red::after {
+  background-color: #9c1515;
+}
+.yellow {
+  color: black !important;
+}
+.yellow::after {
+  background-color: #f3ef18;
+}
+.green::after {
+  background-color: #27bd27;
+}
+
+.btn:hover {
+  color: #fff;
+  z-index: 10;
+}
+.btn:hover::after {
+  width: 100%;
+  /*   transition: 0.4s; */
+}
+
+/* Remove arrow in inputNumber */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* media query */
+@media screen and (max-width: 992px) {
+  #display-num {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    display: block;
+  }
+  #data-output {
+    text-align: center;
+  }
+  #data-output {
+    margin: 20px auto;
+  }
+  #display-num {
+    height: 300px;
+  }
+  #display-num p {
+    font-size: 2rem;
+  }
+
+  #data-input {
+    height: 100vh;
+  }
+
+  .container {
+    padding: 20px;
+  }
+  .card {
+    width: 80%;
+  }
+}
