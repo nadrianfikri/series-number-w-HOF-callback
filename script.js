@@ -73,7 +73,7 @@ function factorial() {
   }
 
   let results = [];
-  for (let i = 2; i <= numberInput.value; i++) {
+  for (let i = 1; i <= numberInput.value; i++) {
     results.push(i);
   }
 
