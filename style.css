@@ -16,23 +16,7 @@ main {
   flex-direction: row;
   height: 100vh;
   gap: 10px;
-  /* z-index: -2; */
-  /* overflow: hidden; */
 }
-/* main::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 100px;
-  right: 0;
-
-  width: 1000px;
-  height: 70px;
-  background-color: red;
-  transform: translate(50px, 180px) rotate(-45deg);
-
-  border-radius: 50%
-} */
 
 .container {
   display: flex;
